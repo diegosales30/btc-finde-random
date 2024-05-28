@@ -3,6 +3,17 @@ const bitcoin = require('bitcoinjs-lib');
 const EC = require('elliptic').ec;
 const ec = new EC('secp256k1');
 const crypto = require('crypto');
+//valor da metade entre o min e o max: 0x5ffffffffffffffff usado como min e max
+    /*
+        dividindo as tarefas:
+        usando apenas uma maquina, dividindo entre threads
+        ex: const minKey = BigInt('0x40000000000000000');
+            const maxKey = BigInt('0x5ffffffffffffffff');
+        na outra thread buscamos entre:  
+        ex: const minKey = BigInt('0x60000000000000000');
+            const maxKey = BigInt('0x7ffffffffffffffff');
+    */
+
 
 if (isMainThread) {
     // Endereço alvo
