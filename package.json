@@ -1,0 +1,16 @@
+{
+  "name": "btc-find-random",
+  "version": "1.0.0",
+  "description": "Solver for Bitcoin puzzle to find the private key",
+  "main": "main.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "bitcoinjs-lib": "^6.1.1",
+    "ecpair": "^2.0.0",
+    "elliptic": "^6.5.4"
+  },
+  "author": "diegoDev",
+  "license": "MIT"
+}
