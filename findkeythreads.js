@@ -95,18 +95,16 @@ const ec = new EC('secp256k1');
 if (isMainThread) {
     // Endereço alvo
     //const targetAddress = '1BY8GQbnueYofwSuFAT3USAhGjPrkxDdW9';
+    // const minKey = BigInt('0x40000000000000000');
+    // const maxKey = BigInt('0x7ffffffffffffffff');
+
 
     //teste puzzle 20
     //1HsMJxNiV7TLxmoF6uJNkydxPFDog4NQum
     const targetAddress = '1LHtnpd8nU5VHEMkG2TMYYNUjjLc992bps';
     const minKey = BigInt('0x2fffffff');
     const maxKey = BigInt('0x3fffffff');
-    //20000000...3fffffff
-    //1LHtnpd8nU5VHEMkG2TMYYNUjjLc992bps
-    // Intervalo de chave privada
-    // const minKey = BigInt('0x40000000000000000');
-    // const maxKey = BigInt('0x7ffffffffffffffff');
-    
+
     // Função para dividir o intervalo entre as threads
     function divideRange(min, max, parts) {
         const range = max - min;
